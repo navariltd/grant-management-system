@@ -12,6 +12,7 @@
   "membership_expiry_date",
   "column_break_5",
   "membership_type",
+  "user",
   "email_id",
   "image",
   "customer_section",
@@ -166,11 +167,24 @@
    "fieldname": "subscription_end",
    "fieldtype": "Date",
    "label": "Subscription End"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "depends_on": "eval:doc.membership_type!='Institution'",
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "User",
+   "mandatory_depends_on": "eval:doc.membership_type!='Institution'",
+   "options": "User",
+   "unique": 1
   }
  ],
  "image_field": "image",
  "links": [],
- "modified": "2022-06-23 12:50:55.711232",
+ "modified": "2022-07-04 13:35:45.820771",
  "modified_by": "Administrator",
  "module": "Grant Management System",
  "name": "Member",
